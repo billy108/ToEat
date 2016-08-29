@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">ToEat</string>
-    <string name="title_text">测试文字</string>
+    <string name="title_text">今天吃什么</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tv_main_today">今天食谱</string>
+    <string name="tv_main_today">今日食谱</string>
     <string name="tv_main_food_list">食材清单</string>
     <string name="tv_main_shop">商店买菜</string>
     <string name="tv_main_hobby">个人喜好</string>
