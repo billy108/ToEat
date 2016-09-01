@@ -15,4 +15,6 @@
     <!-- 线的厚度 -->
     <dimen name="border_thick">1dp</dimen>
     <dimen name="broder_length">30dp</dimen>
+    <dimen name="main_item_heigh">150dp</dimen>
+    <dimen name="main_item">100dp</dimen>
 </resources>

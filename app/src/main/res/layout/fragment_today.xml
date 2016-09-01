@@ -4,10 +4,43 @@
     android:layout_height="match_parent"
     tools:context="com.chuangsi.toeat.fragments.TodayFragment">
 
-
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="今日食谱" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="@dimen/main_item"
+            android:layout_height="@dimen/main_item_heigh"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/txt_breakfast"
+                android:layout_width="@dimen/main_item"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/main_item_breakfast"
+                    android:text="南瓜粥"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:layout_below="@id/main_item_breakfast"
+                    android:src="@drawable/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
 </FrameLayout>
