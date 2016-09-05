@@ -4,9 +4,68 @@
     android:layout_height="match_parent"
     tools:context="com.chuangsi.toeat.fragments.FoodListFragment">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="食材清单" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="18sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="冰箱里有什么" />
+
+            <TextView
+                android:background="@color/title_color"
+                android:text="冷藏"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/foodList_refrigerator_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:background="@color/title_color"
+                android:text="冷冻"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/foodList_freeze_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:background="@color/title_color"
+                android:text="调料 "
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/foodList_fspices_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 </FrameLayout>

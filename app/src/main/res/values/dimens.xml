@@ -17,4 +17,5 @@
     <dimen name="broder_length">30dp</dimen>
     <dimen name="main_item_heigh">150dp</dimen>
     <dimen name="main_item">100dp</dimen>
+    <dimen name="main_tv_heigh">50dp</dimen>
 </resources>

@@ -9,4 +9,6 @@
     <string name="tv_main_shop">商店买菜</string>
     <string name="tv_main_hobby">个人喜好</string>
     <string name="txt_breakfast">早餐：</string>
+    <string name="txt_lunch">午餐：</string>
+    <string name="txt_super">晚餐：</string>
 </resources>
