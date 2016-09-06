@@ -4,10 +4,37 @@
     android:layout_height="match_parent"
     tools:context="com.chuangsi.toeat.fragments.HobbyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="个人喜好" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="我最喜欢吃的食材"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/title_color"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:text="我不吃什么"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/title_color"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:text="我偏爱的口味"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/title_color"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
 
 </FrameLayout>

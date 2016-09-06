@@ -5,9 +5,16 @@
     tools:context="com.chuangsi.toeat.fragments.ShopFragment">
 
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="商场采购" />
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_shop_item"/>
+        <include layout="@layout/layout_shop_item"/>
+        <include layout="@layout/layout_shop_item"/>
+        <include layout="@layout/layout_shop_item"/>
+
+    </LinearLayout>
 
 </FrameLayout>

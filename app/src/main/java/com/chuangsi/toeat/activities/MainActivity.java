@@ -43,6 +43,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private HobbyFragment hobbyFragment;
 
     private FragmentManager manager;
+    private TextView[] textViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initData();
         initView();
 
+        changeTextColor(0);
     }
 
 
@@ -77,6 +79,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         iv_main_back = (ImageView) findViewById(R.id.iv_topBar_back);
         iv_main_back.setVisibility(View.GONE);
 
+        textViews = new TextView[]{textView_main_today, textView_main_food_list, textView_main_shop, textView_main_hobby};
+
         textView_main_today.setOnClickListener(this);
         textView_main_shop.setOnClickListener(this);
         textView_main_food_list.setOnClickListener(this);
@@ -95,6 +99,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         }
 
         viewPager_main.setAdapter(new MainPagerAdapter(manager, fragmentList));
+        viewPager_main.setOnPageChangeListener(new TabOnPageChangeListener());
         viewPager_main.setCurrentItem(0);
 
 
@@ -117,18 +122,62 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.textView_main_today:
+                changeTextColor(0);
                 viewPager_main.setCurrentItem(0);
                 break;
             case R.id.textView_main_food_list:
+                changeTextColor(1);
                 viewPager_main.setCurrentItem(1);
                 break;
             case R.id.textView_main_shop:
+                changeTextColor(2);
                 viewPager_main.setCurrentItem(2);
                 break;
             case R.id.textView_main_hobby:
+                changeTextColor(3);
                 viewPager_main.setCurrentItem(3);
                 break;
 
         }
     }
+
+    /**
+     * 改变BottomBar的字体颜色
+     * @param index 位置
+     */
+    private void changeTextColor(int index){
+        for (int i = 0; i < 4; i++) {
+            if (i == index) {
+                textViews[i].setEnabled(false);
+                textViews[i].setTextColor(getResources().getColor(R.color.black));
+            } else {
+                textViews[i].setEnabled(true);
+                textViews[i].setTextColor(getResources().getColor(R.color.white));
+            }
+        }
+    }
+
+    /**
+     * 功能：Fragment页面改变事件
+     */
+    public class TabOnPageChangeListener implements ViewPager.OnPageChangeListener {
+
+        //当滑动状态改变时调用
+        public void onPageScrollStateChanged(int state) {
+
+        }
+
+        //当前页面被滑动时调用
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){
+
+        }
+
+        //当新的页面被选中时调用
+        public void onPageSelected(int position) {
+            //重置所有TextView的字体颜色
+            changeTextColor(position);
+        }
+    }
+
+
 }
